@@ -1,0 +1,21 @@
+<div class="album">
+    <div class="album-cover"
+         *ngIf="album.cover"
+         (click)="openAlbum(album.id)">
+        <img class="album-cover-img"
+             src="http://i.imgur.com/{{album.cover}}.png">
+    </div>
+    <div class="album-info">
+        <h3 class="album-info-title">{{album.title}}</h3>
+        <p class="album-info-description"
+           *ngIf="album.description">
+            {{album.description}}
+        </p>
+        <p class="album-info-images-count">
+            {{album.images_count}} images &bull;
+        </p>
+        <p class="album-info-datetime">
+            {{ album.datetime * 1000 | date :'medium'}}
+        </p>
+    </div>
+</div>

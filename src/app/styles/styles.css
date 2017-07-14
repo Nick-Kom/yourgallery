@@ -1,0 +1,9 @@
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: url(../assets/img/welcome-image.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}

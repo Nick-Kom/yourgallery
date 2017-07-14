@@ -1,0 +1,55 @@
+<md-tab-group class="albums-upload-tabs">
+    <md-tab label="{{tabName}}">
+        <album-list *ngIf="hideAlbums"
+                    [albums]="albums">
+        </album-list>
+        <image *ngIf="showImages"></image>
+        <div *ngIf="singleImageLink">
+            <a class="back-to"
+               mdTooltip="Back to album"
+               (click)="backToAlbum()">
+                <md-icon>
+                    keyboard_arrow_left
+                </md-icon>
+                <md-icon>
+                    folder_open
+                </md-icon>
+            </a>
+            <div class="single-image-wrap">
+                <img class="single-image-wrap-img"
+                     src="{{singleImageLink}}" alt="">
+
+                <div class="single-image-wrap-info">
+                    <p> Name : {{image.link.slice(19)}}</p>
+                    <p> Size : {{image.width + 'x' + image.height }}</p>
+                    <p> Date : {{image.datetime * 1000 | date }}</p>
+                </div>
+            </div>
+        </div>
+    </md-tab>
+    <md-tab label="Upload">
+        <form class="album-select">
+            <p class="album-select-for-uolad">
+                Select album for upload :
+            </p>
+            <md-select placeholder="Album"
+                       [(ngModel)]="selectedAlbume" name="Albums">
+                <md-option (click)="selectAlbum(album.id)"
+                           *ngFor="let album of albums"
+                           [value]="album.title">
+                    {{album.title}}
+                </md-option>
+            </md-select>
+        </form>
+        <div class="uploud-zone" *ngIf="selectedAlbum">
+            <dropzone [config]="dropzoneConfig"
+                      (success)="onUploadSuccess($event)"
+                      [message]="'Drop files or browse to upload'">
+            </dropzone>
+        </div>
+    </md-tab>
+</md-tab-group>
+<div class="loading" *ngIf="loader">
+    <md-spinner class="loading-spiner"></md-spinner>
+</div>
+

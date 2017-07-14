@@ -1,0 +1,17 @@
+<div class="img-wrap">
+    <img class="image"
+         mdTooltip="
+         Name : {{image.link.slice(19)}} &nbsp; &nbsp;&nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;
+         Size :  {{ image.width + 'x' + image.height }}
+                 &nbsp; &nbsp; &nbsp; &nbsp;"
+         src="{{image.link}}" alt="image">
+    <div class="open-image"
+         mdTooltip="Open image"
+         (click)="openImage(image)">
+        <p>Select</p>
+    </div>
+</div>
+
+

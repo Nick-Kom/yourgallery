@@ -1,0 +1,30 @@
+<md-toolbar class="header">
+    <h1 class="logo">
+        <div class="logo">
+            <md-icon class="logo-icon">
+                filter_hdr
+            </md-icon>
+            <h1 class="logo-inscription">YourGallery</h1>
+        </div>
+    </h1>
+    <span class="spacer-sign-in"></span>
+    <p *ngIf="authorized" class="user-name">Hello {{userName}}</p>
+    <a class="header-sign-in"
+       *ngIf="!authorized"
+       (click)="authorize()">
+        Sign in
+    </a>
+</md-toolbar>
+<div class="welcome-section" *ngIf="!authorized">
+    <h2 class="greeting">
+        Welcome to YourGallery
+    </h2>
+    <button md-raised-button
+            class="btn-sign-in" (click)="authorize()">
+        Sign in
+    </button>
+</div>
+<album *ngIf="authorized"></album>
+
+
+

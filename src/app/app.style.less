@@ -1,0 +1,72 @@
+.header {
+  color: white;
+  background-color: #636363;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 3px 5px -1px   rgba(0, 0, 0, .2),
+  0 6px 10px 0 rgba(0, 0, 0, .14),
+  0 1px 18px 0 rgba(0, 0, 0, .12);
+
+  .logo {
+    display: block;
+    cursor: default;
+    &-icon {
+      font-size: 40px;
+      width: auto;
+      height: auto;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    &-inscription {
+      margin-top: 13px;
+      position: absolute;
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+    color: white;
+    font-size: 30px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .spacer-sign-in {
+    flex: 1 1 auto;
+  }
+  .user-name {
+    margin-top: 0;
+    flex: 0.01 auto;
+  }
+
+  &-sign-in {
+    cursor: pointer;
+  }
+}
+
+.welcome-section {
+  text-align: center;
+  margin-top: 150px;
+  line-height: 40px;
+  padding: 0 28px;
+
+  .greeting {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 56px;
+    color: #636363;
+    margin: 35px 0 10px 0;
+  }
+  .btn-sign-in {
+    text-align: center;
+    margin: 50px 0 auto;
+    line-height: 40px;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #80b493;
+    color: #f9fff9;
+  }
+}

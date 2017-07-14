@@ -1,0 +1,18 @@
+<a class="back-to"
+   mdTooltip="Back to albums"
+   (click)="backToAlbums()">
+    <md-icon>
+        keyboard_arrow_left
+    </md-icon>
+    <md-icon>
+        folder_open
+    </md-icon>
+</a>
+<div class="loading" *ngIf="loader">
+    <md-spinner class="loading-spiner"></md-spinner>
+</div>
+<div>
+    <h2 class="album-title">{{albumTitle}}</h2>
+    <image-list [images]="images"></image-list>
+</div>
+

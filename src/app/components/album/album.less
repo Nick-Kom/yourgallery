@@ -1,0 +1,85 @@
+.albums-upload-tabs {
+
+  /deep/ .mat-tab-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /deep/ .mat-tab-label {
+    line-height: 60px !important;
+    height: 58px !important;
+    font-size: 22px !important;
+    border-top: 2px !important;
+
+  }
+
+  /deep/ .mat-tab-body {
+    background-color: #fafafa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .album-select {
+    margin: 33px 0 20px 0;
+    text-align: center;
+    font-size: 24px;
+    color: #636363;
+
+    &-for-uolad {
+      display: inline-block;
+      margin: 10px 0 10px 0;
+    }
+  }
+  .back-to {
+    color: #636363;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+
+  .single-image-wrap {
+    margin-top: 12px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    &-img {
+      height: auto;
+      max-width: 100%;
+    }
+    &-info {
+      font-size: 22px;
+    }
+
+  }
+
+  .uploud-zone {
+
+    width: 50%;
+    height: 350px;
+    margin: 30px auto;
+
+    /deep/ .dropzone.dz-wrapper .dz-message {
+      height: 350px;
+    }
+  }
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  &-spiner {
+    display: block;
+  }
+}
+
