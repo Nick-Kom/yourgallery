@@ -6,6 +6,7 @@ dist
 logs
 *.log
 npm-debug.log*
+build/
 
 
 # Dependency directories

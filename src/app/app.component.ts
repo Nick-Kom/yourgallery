@@ -19,7 +19,7 @@ export class AppComponent {
 
     authorize() {
         let token: any;
-        OAuth.initialize('qOx7JukXIepYyqo8o3-8wC6g2qU');
+        OAuth.initialize('fO4XvBpiwka-yVgL56Ne1eCNrVk');
         OAuth.popup('imgur')
             .done((result: any) => {
                 token = result.access_token;
